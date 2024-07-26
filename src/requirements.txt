@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+pymongo
+python-telegram-bot==21.2
+pytest
+pytest-ordering
+beautifulsoup4
+requests

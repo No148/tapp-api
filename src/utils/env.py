@@ -1,0 +1,37 @@
+import os
+
+from dotenv import load_dotenv
+from pathlib import Path
+
+load_dotenv()
+
+ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
+PARTNERS_ACCESS_TOKEN = os.getenv('PARTNERS_ACCESS_TOKEN')
+API_PORT = int(os.getenv('API_PORT', 8080))
+API_HOST = os.getenv('API_HOST')
+API_VERSION_STR = os.getenv('API_VERSION_STR')
+PROJECT_NAME = os.getenv('PROJECT_NAME')
+ENVIRONMENT_NAME = os.getenv('ENVIRONMENT_NAME', 'local')
+
+MONGO_DB_CONNECTION_STRING_TESTING = os.getenv('MONGO_DB_CONNECTION_STRING_TESTING', 'mongodb://localhost:27017/tapp_guru_testing')
+MONGO_DB_NAME_TESTING = os.getenv('MONGO_DB_NAME_TESTING')
+MONGO_DB_NAME = os.getenv('MONGO_DB_NAME')
+MONGO_UPDATE_CHUNK_SIZE = os.getenv('MONGO_UPDATE_CHUNK_SIZE')
+MONGO_CHATS_SIZE_TO_REFRESH = os.getenv('MONGO_CHATS_SIZE_TO_REFRESH')
+MONGO_HOST = os.getenv('MONGO_HOST')
+MONGO_PORT = os.getenv('MONGO_PORT')
+MONGO_USERNAME = os.getenv('MONGO_USERNAME')
+MONGO_PASSWORD = os.getenv('MONGO_PASSWORD')
+
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+BOT_USERNAME = os.getenv('BOT_USERNAME')
+WEBAPP_URL = os.getenv('WEBAPP_URL')
+
+TAPPING_GURU_INTERVAL_HOURS = float(os.getenv('TAPPING_GURU_INTERVAL_HOURS', 6))
+ENERGY_REFRESH_INTERVAL_HOURS = float(os.getenv('ENERGY_REFRESH_INTERVAL_HOURS', 12))
+
+WORK_DIR = Path(__file__).resolve().parent.parent
+UPLOADS_PATH = os.getenv('UPLOADS_PATH')
+
+PROJECT_MODERATION_CHAT_ID = os.getenv('PROJECT_MODERATION_CHAT_ID')
